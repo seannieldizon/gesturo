@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #0f172a;
+  --background: #f0f9ff;
+}
+
+body {
+  color: var(--foreground);
+  background:
+    radial-gradient(ellipse 120% 80% at 100% -20%, rgba(253, 230, 138, 0.45) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 60% at 0% 100%, rgba(186, 230, 253, 0.5) 0%, transparent 45%),
+    linear-gradient(165deg, #fefce8 0%, #f0f9ff 38%, #e0f2fe 72%, #fff 100%);
+  min-height: 100vh;
+}
+
+/* Subtle inclusive hand motif (decorative) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ctext x='10' y='50' font-size='36'%3E🤟%3C/text%3E%3C/svg%3E");
+  background-size: 80px 80px;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible {
+  @apply outline-2 outline-offset-2 outline-primary-500;
+}
+
+/* Animation delay utilities */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
+.animate-delay-600 { animation-delay: 600ms; }
+.animate-delay-700 { animation-delay: 700ms; }
+.animate-delay-800 { animation-delay: 800ms; }
+.animate-fill-forwards { animation-fill-mode: forwards; }

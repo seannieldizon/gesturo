@@ -1,0 +1,102 @@
+{
+  "title": "FSL Knowledge Check",
+  "description": "Eight questions covering alphabet, numbers, greetings, and everyday phrases.",
+  "questions": [
+    {
+      "id": "q1",
+      "category": "Alphabet",
+      "question": "In FSL, the letter A is typically formed by:",
+      "options": [
+        "Open palm facing forward",
+        "Fist with thumb on the side",
+        "Peace sign",
+        "Flat hand with fingers spread"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q2",
+      "category": "Numbers",
+      "question": "How do you sign the number 3 in many sign systems (including common FSL teaching)?",
+      "options": [
+        "Three fingers only, thumb down",
+        "Thumb, index, and middle finger extended",
+        "All five fingers",
+        "Pinky only"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q3",
+      "category": "Greetings",
+      "question": "A common way to sign “thank you” involves:",
+      "options": [
+        "Waving with both hands",
+        "Touching fingers to the chin, then moving the hand forward",
+        "Pointing to the chest twice",
+        "Tapping the shoulder"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q4",
+      "category": "Alphabet",
+      "question": "FSL is best described as:",
+      "options": [
+        "Signed English word-for-word",
+        "A visual language with its own grammar",
+        "Identical to ASL in every region",
+        "Only finger spelling"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q5",
+      "category": "Phrases",
+      "question": "Signing “yes” often resembles:",
+      "options": [
+        "Shaking the head side to side",
+        "Nodding the fist up and down",
+        "Clapping hands",
+        "Crossing arms"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q6",
+      "category": "Numbers",
+      "question": "The number 5 is often shown by:",
+      "options": [
+        "Fist closed tight",
+        "All five fingers spread apart",
+        "Two fingers",
+        "Thumb and pinky only"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q7",
+      "category": "Greetings",
+      "question": "When signing “hello,” a common movement is:",
+      "options": [
+        "Hand wave side to side with an open palm",
+        "Fist bump",
+        "Pointing at the other person",
+        "Hands behind the back"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": "q8",
+      "category": "Culture",
+      "question": "Facial expressions in sign languages often:",
+      "options": [
+        "Are optional decoration",
+        "Carry grammar and meaning (e.g., questions, negation)",
+        "Should be avoided",
+        "Are only for emotions"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}
