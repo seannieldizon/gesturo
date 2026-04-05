@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   BookOpen,
   Users,
@@ -28,13 +27,11 @@ export default function AboutPage() {
           Understanding FSL and its importance in the Filipino deaf community.
         </p>
         <ScrollReveal animation="fade-up" duration={600}>
-          <div className="relative mx-auto max-w-2xl rounded-2xl overflow-hidden aspect-[16/10] bg-slate-200">
-            <Image
-              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1200&q=80"
-              alt="Person in thoughtful reflection - representing communication and understanding in the deaf community"
-              fill
-              className="object-cover"
-              sizes="(max-width: 672px) 100vw, 672px"
+          <div className="mx-auto flex max-w-2xl min-h-[200px] items-center justify-center overflow-hidden rounded-2xl border border-primary-200/40 bg-gradient-to-b from-filipino-cream/90 to-white p-6 shadow-sm sm:min-h-[240px] sm:p-8">
+            <img
+              src="/gif/thank-you.gif"
+              alt="Thank you — representing gratitude and inclusive communication"
+              className="h-auto w-full max-h-[280px] object-contain sm:max-h-[320px]"
             />
           </div>
         </ScrollReveal>

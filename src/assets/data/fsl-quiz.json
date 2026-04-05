@@ -1,6 +1,6 @@
 {
   "title": "FSL Knowledge Check",
-  "description": "Eight questions covering alphabet, numbers, greetings, and everyday phrases.",
+  "description": "Challenge questions covering emergency response, alphabet, numbers, greetings, and everyday phrases.",
   "questions": [
     {
       "id": "q1",
@@ -95,6 +95,42 @@
         "Carry grammar and meaning (e.g., questions, negation)",
         "Should be avoided",
         "Are only for emotions"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q9",
+      "category": "Emergency",
+      "question": "In emergency communication, what is most important when signing?",
+      "options": [
+        "Speed only",
+        "Clarity and visibility of signs",
+        "Using very small movements",
+        "Avoiding facial expressions"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q10",
+      "category": "Emergency",
+      "question": "The sign concept for “call / phone” is commonly shown by:",
+      "options": [
+        "Crossing both arms",
+        "Y-hand shape placed near the ear",
+        "Pointing at the floor",
+        "Flat hand on chest only"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "id": "q11",
+      "category": "Phrases",
+      "question": "A common sign for “no” is often taught as:",
+      "options": [
+        "A gentle nodding fist",
+        "Snapping the index and middle finger against the thumb",
+        "Waving both hands in circles",
+        "Crossing hands on the chest"
       ],
       "correctIndex": 1
     }

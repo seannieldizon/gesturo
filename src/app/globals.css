@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --foreground: #0f172a;
-  --background: #f0f9ff;
+  --foreground: #1a1410;
+  --background: #faf6ef;
 }
 
 body {
   color: var(--foreground);
   background:
-    radial-gradient(ellipse 120% 80% at 100% -20%, rgba(253, 230, 138, 0.45) 0%, transparent 50%),
-    radial-gradient(ellipse 100% 60% at 0% 100%, rgba(186, 230, 253, 0.5) 0%, transparent 45%),
-    linear-gradient(165deg, #fefce8 0%, #f0f9ff 38%, #e0f2fe 72%, #fff 100%);
+    radial-gradient(ellipse 110% 70% at 100% -15%, rgba(237, 224, 206, 0.85) 0%, transparent 52%),
+    radial-gradient(ellipse 90% 55% at 0% 100%, rgba(191, 219, 254, 0.35) 0%, transparent 48%),
+    linear-gradient(168deg, #faf6ef 0%, #f4ebe0 32%, #ede4d6 58%, #f0f7fc 100%);
   min-height: 100vh;
 }
 

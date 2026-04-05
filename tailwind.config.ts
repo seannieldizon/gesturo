@@ -25,6 +25,14 @@ const config: Config = {
           yellow: "#fbbf24",
           orange: "#f97316",
         },
+        /** Stakeholder request: cream & warm brown for Filipino cultural warmth */
+        filipino: {
+          cream: "#f7f1e8",
+          sand: "#ede4d6",
+          bark: "#6b4f3b",
+          earth: "#5c4033",
+          shell: "#faf6ef",
+        },
       },
       maxWidth: {
         "content": "1600px",

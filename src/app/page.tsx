@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Users, Accessibility, Heart } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { AnimalMascots } from "@/components/AnimalMascots";
+import { HumanGestureStrip } from "@/components/AnimalMascots";
 import { HomeCtaButtons } from "@/components/HomeCtaButtons";
 
 export default function HomePage() {
@@ -29,10 +29,10 @@ export default function HomePage() {
           Learn Filipino Sign Language through interactive lessons designed for both deaf and hearing communities.
         </p>
         <HomeCtaButtons />
-        <p className="mx-auto mt-12 max-w-lg text-center text-sm leading-relaxed text-slate-500">
-          Meet a few friends who appear across GesTURO — from the home page to lessons and quizzes, they keep the experience warm and cohesive.
+        <p className="mx-auto mt-12 max-w-lg text-center text-sm leading-relaxed text-[#5c4033]/85">
+          GesTURO centers people and everyday gestures — warm tones inspired by Filipino interiors, with visuals that foreground human connection.
         </p>
-        <AnimalMascots />
+        <HumanGestureStrip />
       </section>
 
       {/* Why Learn FSL? */}
@@ -102,7 +102,7 @@ export default function HomePage() {
               <ul className="space-y-2 text-slate-600">
                 <li className="flex gap-2">
                   <span className="text-amber-500">•</span>
-                  Start with the FSL alphabet in the Learn section
+                  Start with Emergency; unlock each next lesson by marking the previous one complete on Learn and finishing its Practice challenge
                 </li>
                 <li className="flex gap-2">
                   <span className="text-amber-500">•</span>

@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { LottiePlayer } from "@/components/lottie/LottiePlayer";
-import { LOTTIE_ANIMALS } from "@/constants/lottie-animals";
+import { HandHeart } from "lucide-react";
 
 const STORAGE_KEY = "gesTURO-welcome-dismissed";
+const HELLO_GIF = "/gif/hello.gif";
 
 export function WelcomeSplash() {
   const [open, setOpen] = useState(false);
+  const [helloGifFailed, setHelloGifFailed] = useState(false);
 
   useEffect(() => {
     try {
@@ -38,8 +39,17 @@ export function WelcomeSplash() {
       aria-labelledby="welcome-title"
     >
       <div className="relative w-full max-w-lg rounded-[2rem] border border-white/80 bg-white/90 p-8 shadow-2xl shadow-sky-200/50">
-        <div className="mx-auto mb-6 h-48 w-48 sm:h-56 sm:w-56">
-          <LottiePlayer src={LOTTIE_ANIMALS.welcome} loop className="h-full w-full" />
+        <div className="mx-auto mb-6 flex min-h-[12rem] max-h-56 w-full max-w-xs items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-filipino-cream to-filipino-sand p-3 shadow-inner sm:min-h-[14rem] sm:max-w-sm">
+          {helloGifFailed ? (
+            <HandHeart className="h-24 w-24 text-filipino-earth sm:h-28 sm:w-28" aria-hidden />
+          ) : (
+            <img
+              src={HELLO_GIF}
+              alt=""
+              className="h-auto max-h-52 w-full object-contain"
+              onError={() => setHelloGifFailed(true)}
+            />
+          )}
         </div>
         <h2 id="welcome-title" className="mb-2 text-center text-2xl font-bold text-slate-800">
           Welcome to GesTURO

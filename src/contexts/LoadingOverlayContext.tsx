@@ -8,8 +8,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { LottiePlayer } from "@/components/lottie/LottiePlayer";
-import { LOTTIE_ANIMALS } from "@/constants/lottie-animals";
+import { Loader2 } from "lucide-react";
 
 type LoadingContextValue = {
   isLoading: boolean;
@@ -51,8 +50,8 @@ export function LoadingOverlayProvider({ children }: { children: ReactNode }) {
           aria-live="polite"
           aria-label="Loading"
         >
-          <div className="h-28 w-28 sm:h-36 sm:w-36">
-            <LottiePlayer src={LOTTIE_ANIMALS.loading} loop className="h-full w-full" />
+          <div className="flex h-28 w-28 items-center justify-center rounded-full bg-white shadow-inner sm:h-36 sm:w-36">
+            <Loader2 className="h-12 w-12 animate-spin text-primary-600 sm:h-16 sm:w-16" aria-hidden />
           </div>
           <p className="text-sm font-semibold text-slate-600">Loading…</p>
         </div>
