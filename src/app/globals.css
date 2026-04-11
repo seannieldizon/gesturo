@@ -5,6 +5,14 @@
 :root {
   --foreground: #1a1410;
   --background: #faf6ef;
+  /* Match Header (sticky top-16) + Footer (py-6 + text); keep in sync if those change */
+  --gesturo-header-offset: 4rem;
+  --gesturo-footer-offset: 6rem;
+}
+
+.dark {
+  --foreground: #e2e8f0;
+  --background: #0f172a;
 }
 
 body {
@@ -16,7 +24,14 @@ body {
   min-height: 100vh;
 }
 
-/* Subtle inclusive hand motif (decorative) */
+.dark body,
+html.dark body {
+  background:
+    radial-gradient(ellipse 110% 70% at 100% -15%, rgba(30, 41, 59, 0.85) 0%, transparent 52%),
+    radial-gradient(ellipse 90% 55% at 0% 100%, rgba(30, 58, 138, 0.2) 0%, transparent 48%),
+    linear-gradient(168deg, #0f172a 0%, #1e293b 32%, #1e293b 58%, #0f172a 100%);
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -28,18 +43,20 @@ body::before {
   background-size: 80px 80px;
 }
 
+.dark body::before {
+  opacity: 0.02;
+}
+
 main {
   position: relative;
   z-index: 1;
 }
 
-/* Focus styles for accessibility */
 a:focus-visible,
 button:focus-visible {
   @apply outline-2 outline-offset-2 outline-primary-500;
 }
 
-/* Animation delay utilities */
 .animate-delay-100 { animation-delay: 100ms; }
 .animate-delay-200 { animation-delay: 200ms; }
 .animate-delay-300 { animation-delay: 300ms; }
@@ -49,3 +66,40 @@ button:focus-visible {
 .animate-delay-700 { animation-delay: 700ms; }
 .animate-delay-800 { animation-delay: 800ms; }
 .animate-fill-forwards { animation-fill-mode: forwards; }
+
+/* Smooth scrollbar for dark mode */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Prevent horizontal overflow globally */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Ensure touch targets are at least 44px */
+@media (pointer: coarse) {
+  button, a, select, input[type="radio"], input[type="checkbox"] {
+    min-height: 44px;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}

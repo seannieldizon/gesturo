@@ -1,18 +1,13 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { BookOpen, Zap } from "lucide-react";
-import { useLoadingOverlay } from "@/contexts/LoadingOverlayContext";
+import { useAppNavigation } from "@/hooks/useAppNavigation";
 
 export function HomeCtaButtons() {
-  const router = useRouter();
-  const { withLoading } = useLoadingOverlay();
+  const { push } = useAppNavigation(420);
 
   const go = (path: string) => {
-    void withLoading(async () => {
-      await new Promise((r) => setTimeout(r, 500));
-      router.push(path);
-    });
+    void push(path);
   };
 
   return (

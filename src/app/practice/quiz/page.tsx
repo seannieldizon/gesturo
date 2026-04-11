@@ -125,8 +125,8 @@ export default function QuizPage() {
     }
 
     return (
-      <div className="mx-auto w-full max-w-content px-6 py-12 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-lg rounded-[2rem] border border-[#dccfba]/90 bg-gradient-to-br from-white via-filipino-cream/80 to-sky-50/40 p-10 text-center shadow-soft-lg">
+      <div className="mx-auto w-full max-w-content px-4 py-8 sm:px-8 sm:py-12 lg:px-12">
+        <div className="mx-auto max-w-lg rounded-2xl border border-[#dccfba]/90 bg-gradient-to-br from-white via-filipino-cream/80 to-sky-50/40 p-5 text-center shadow-soft-lg sm:rounded-[2rem] sm:p-10">
           <div className="mx-auto mb-6 flex min-h-[9rem] max-h-48 items-center justify-center overflow-hidden rounded-2xl bg-white/90 p-3 shadow-inner ring-2 ring-white">
             {completeGifFailed ? (
               <div className="flex h-36 w-36 items-center justify-center rounded-full bg-gradient-to-br from-emerald-100 to-sky-100">
@@ -175,7 +175,7 @@ export default function QuizPage() {
   }
 
   return (
-    <div className="mx-auto w-full max-w-content px-6 py-10 sm:px-8 lg:px-12">
+    <div className="mx-auto w-full max-w-content px-4 py-6 sm:px-8 sm:py-10 lg:px-12">
       <Link
         href="/practice"
         className="mb-8 inline-flex items-center gap-1 text-sm font-semibold text-sky-700 hover:text-sky-900"

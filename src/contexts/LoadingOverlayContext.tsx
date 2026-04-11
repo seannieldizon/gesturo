@@ -8,7 +8,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { Loader2 } from "lucide-react";
+import { LoadingOverlayModal } from "@/components/LoadingOverlayModal";
 
 type LoadingContextValue = {
   isLoading: boolean;
@@ -43,19 +43,7 @@ export function LoadingOverlayProvider({ children }: { children: ReactNode }) {
   return (
     <LoadingOverlayContext.Provider value={value}>
       {children}
-      {isLoading && (
-        <div
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center gap-4 bg-white/85 backdrop-blur-md"
-          role="status"
-          aria-live="polite"
-          aria-label="Loading"
-        >
-          <div className="flex h-28 w-28 items-center justify-center rounded-full bg-white shadow-inner sm:h-36 sm:w-36">
-            <Loader2 className="h-12 w-12 animate-spin text-primary-600 sm:h-16 sm:w-16" aria-hidden />
-          </div>
-          <p className="text-sm font-semibold text-slate-600">Loading…</p>
-        </div>
-      )}
+      <LoadingOverlayModal open={isLoading} />
     </LoadingOverlayContext.Provider>
   );
 }

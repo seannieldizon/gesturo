@@ -31,11 +31,11 @@ const items = [
  */
 export function HumanGestureStrip() {
   return (
-    <div className="mx-auto mt-10 grid w-full max-w-4xl grid-cols-3 gap-2 sm:gap-4">
+    <div className="mx-auto mt-8 grid w-full max-w-4xl grid-cols-1 gap-3 min-[400px]:grid-cols-3 sm:mt-10 sm:gap-4">
       {items.map(({ Icon, label, caption, bg, iconClass }) => (
         <div
           key={label}
-          className={`flex min-w-0 flex-col gap-2 rounded-2xl bg-gradient-to-br ${bg} px-3 py-3 shadow-sm ring-1 ring-[#5c4033]/10 sm:px-4 sm:py-4`}
+          className={`flex min-w-0 flex-col gap-2 rounded-xl bg-gradient-to-br ${bg} px-3 py-3 shadow-sm ring-1 ring-[#5c4033]/10 min-[400px]:rounded-2xl sm:px-4 sm:py-4`}
         >
           <span
             className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/70 shadow-inner"

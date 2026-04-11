@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   title: "GesTURO | Filipino Sign Language",
   description:
     "Learn Filipino Sign Language through interactive lessons designed for both deaf and hearing communities.",
+  icons: {
+    icon: [{ url: "/logo/logo.ico", type: "image/x-icon" }],
+    shortcut: "/logo/logo.ico",
+    apple: "/logo/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -26,12 +31,14 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className={plusJakarta.variable}>
-      <body className="font-sans antialiased">
+    <html lang="en" className={plusJakarta.variable} suppressHydrationWarning>
+      <body className="font-sans antialiased dark:bg-slate-900 dark:text-slate-100">
         <Providers>
-          <Header />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <main className="flex min-h-0 w-full flex-1 flex-col">{children}</main>
+            <Footer className="shrink-0" />
+          </div>
         </Providers>
       </body>
     </html>
